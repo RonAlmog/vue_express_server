@@ -20,14 +20,14 @@ app.use(function (req, res, next) {
 });
 
 const mongoose = require('mongoose');
-mongoose.connection('mongodb://localhost:27017/globomatics')
+mongoose.connect('mongodb://localhost:27017/globomatics')
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error: '))
 db.once('open', function () {
     console.log('Connected to Mongodb')
 
-    app.listen(app.get('post'), function () {
+    app.listen(app.get('port'), function () {
         console.log('API server listening on port ' + app.get('port'));
     });
 })
