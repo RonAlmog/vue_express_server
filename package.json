@@ -9,7 +9,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "eslint": "^6.6.0"
+    "eslint": "^8.43.0"
   },
   "scripts": {
     "start": "npm run lint & nodemon app.js",
